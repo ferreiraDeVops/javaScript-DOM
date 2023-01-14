@@ -1,12 +1,12 @@
 // Criando um objeto
 const usuario = {
-        name: prompt(`Nome do usuario`),
-        email: prompt(`Email do usuario:`),
+        name: `Felipe`,
+        email: `ferreiradevops@gmail.com`,
         friends: [{
-                name: prompt(`Nome da filha do usuario:`),
+                name: `Jessica`,
                 adress:{
-                        street: prompt(`Endereço da filha do usuario:`),
-                        numer: (`Numero do endereço da filha do usuario:`)
+                        street: `QMS 29 MODULO C`,
+                        numer: 29
                 }
         }],
         age: 26,
@@ -17,7 +17,11 @@ const usuario = {
         }
 }
 //console.log(usuario.friends[0].phone.ddd)
+// não consegue ler as propriedades de undefined
+// leu a propriedade usuario leu friends procurou a propriedade phone viu que ela não existe 
+// retornou undefnid procurou a propriedade ddd dentro da propriedade phone que e undefnid e deu erro no console
+//console.log(usuario.friends[0].phone.ddd)
 console.log(usuario?.friends[0]?.phone?.ddd)
 
-
-console.log(usuario.friends[0].name)
+console.log(usuario.brothers?.length)
+console.log(usuario?.brothers?.[5].name)
