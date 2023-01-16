@@ -1,0 +1,20 @@
+{
+  "name": "javascript-dom",
+  "version": "1.0.0",
+  "description": "Treinamento javaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferreiraDeVops/javaScript-DOM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ferreiraDeVops/javaScript-DOM/issues"
+  },
+  "homepage": "https://github.com/ferreiraDeVops/javaScript-DOM#readme"
+}
