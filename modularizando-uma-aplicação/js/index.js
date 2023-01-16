@@ -5,39 +5,15 @@ import themeSwitcher from "./themeSwitcher.js"
 
 
 
-
-
-
-const input = document.getElementById(`input`)
-const resultInput = document.getElementById(`result`)
-
-
-
-
-
-input.addEventListener(`keydown`,handleTyping)
-
-// ADICIONANDO O ELEMENTO DE LIMPAR INPUT
+document.getElementById(`input`).addEventListener(`keydown`,handleTyping)
 document.getElementById(`clear`).addEventListener(`click`, handleClearInput)
-
-// ADICIONANDO OS BOTÕES PARA ADICIONAR OS ELEMENTOS CLICADOS AO INPUT
-
 document.querySelectorAll(`.charKey`).forEach(function(charKeyBtn){// Selecionar o elemento .class percorrendo todos elementos usando o foreach passando uma função e um valor de callback como parametro
         charKeyBtn.addEventListener(`click`,handleButtonPress)
 })
-
-// ADICIONANDO FUNCIONALIDADE DO BOTÃO = 
 document.getElementById(`equal`).addEventListener(`click`, calculate)
 
-// ADICIONANDO A FUNÇÃO DE CALCULO USANDO EVAL()
-
-
-
 // TEMA DA CALCULADORA
-
 document.getElementById(`themeSwitcher`).addEventListener(`click`,themeSwitcher)
-
-
 document.getElementById(`copyToClipboard`).addEventListener(`click`,copyToClipBoard)
 
 

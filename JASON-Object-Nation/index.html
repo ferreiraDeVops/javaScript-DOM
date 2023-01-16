@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <script src="index.js" type="module" defer></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<body>
+        <h1>Arquivos Json</h1>
+        <hr>
+        <h3>" " para nomear as chaves</h3>
+        <h3>Tipos primitivos suportados para valores (string, number,boolean e null)</h3>
+        <h3>{ } para definir grupos de propriedades (objetos)</h3> 
+        <h3>[ ] para definir listas de dados (arrays)</h3>
+        <h3>, para separar as propriedades</h3> 
+        <hr>
+        <h4>Exemplo: abra o console!</h4>
+        <h5>const str = `{
+                "name": "felipe",
+                "job": "fullstack developer",
+                "tecnologies": "['html','CSS','javaScript','SQL']",
+                "working": "true",
+                "yearsOfExperiencie": 7,
+                "website": null
+        }`</h5>
+        <h5>Transformando em obj</h5>
+        <h5>const obj = JSON.parse(str)</h5>
+        <h3>
+                {name: 'felipe', job: 'fullstack developer', tecnologies: "['html','CSS','javaScript','SQL']", working: 'true', yearsOfExperiencie: 7, …}
+        </h3>
+        <h4>const str2 = JSON.stringify(obj) tranforma o objeto em instring novamente</h4>
+
+</body>
+</html>

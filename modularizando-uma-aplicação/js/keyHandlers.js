@@ -1,15 +1,19 @@
-const input = document.querySelector(`#input`)
+import calculate from "./calculate.js"
 
+const input = document.querySelector(`#input`)
+// ADICIONANDO FUNCIONALIDADE DO BOTÃO = 
 export function handleButtonPress(ev){ // adicionando o evento click no evento parametro charkeybtn 
         const value = ev.currentTarget.dataset.value
         input.value += value
 }
 
+// ADICIONANDO O ELEMENTO DE LIMPAR INPUT
 export function handleClearInput(clear){
         input.value = ""
         input.focus()
 }
 
+// ADICIONANDO OS BOTÕES PARA ADICIONAR OS ELEMENTOS CLICADOS AO INPUT
 export function handleTyping(ev){ // seleciona o input adiciona um evento de teclado keydown 
         ev.preventDefault()  // para o comportamento padrão da pagina
         const allawedKeys = [ "(" , ")" ,"/","*","-","+","9","8","7","6","5","4","3","2","1","0",".","%"," " ]
@@ -31,5 +35,6 @@ export function handleTyping(ev){ // seleciona o input adiciona um evento de tec
 
         if (ev.key === `Enter`){
                 calculate()
+
         }
 }
