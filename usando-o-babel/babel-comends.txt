@@ -1,0 +1,21 @@
+O babel não e uma dependecia da produção do projeto final, ele apenas faz a conversão de 
+codigos enquanto e desenvolvido
+
+Comandos do babel
+
+
+                                 Iniciando npm
+----------------------------------------------------------------------------------------
+1_Comando de inciar npm com funções pré estabelecidas pelo package.json 
+* npm init -y 
+2_Comando de iniciar npm inserindo as opções de cofiguração do package.json
+* npm init
+                                Instalando babel
+----------------------------------------------------------------------------------------
+1_Instalando o babel de forma completa
+-- @babel/core nucleo do babel
+-- @babel/cli Ferramenta de linha de comando
+-- @babel/preset-env Configurações do babel que ja podem ser feitas automaticamente
+* npm install --save-dev @babel/core @babel/cli @babel/preset-env
+
+
