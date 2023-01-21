@@ -4,18 +4,53 @@ codigos enquanto e desenvolvido
 Comandos do babel
 
 
-                                 Iniciando npm
+                                 
 ----------------------------------------------------------------------------------------
-1_Comando de inciar npm com funções pré estabelecidas pelo package.json 
+                                Iniciando npm
+1_ Comando de inciar npm com funções pré estabelecidas pelo package.json 
 * npm init -y 
-2_Comando de iniciar npm inserindo as opções de cofiguração do package.json
+2_ Comando de iniciar npm inserindo as opções de cofiguração do package.json
 * npm init
-                                Instalando babel
+                   
 ----------------------------------------------------------------------------------------
-1_Instalando o babel de forma completa
+                                Instalando babel
+1_ Instalando o babel de forma completa
 -- @babel/core nucleo do babel
 -- @babel/cli Ferramenta de linha de comando
 -- @babel/preset-env Configurações do babel que ja podem ser feitas automaticamente
 * npm install --save-dev @babel/core @babel/cli @babel/preset-env
-
-
+---------------------------------------------------------------------------------------
+                                Utilizando o babel
+1_ Utilizando npx para utilizar babel crie um diretorio index.js para acessar o diretori
+o utilize o metodo abaixo esse metodo faz uma conversão simples do codigo mostrada no 
+terminal:
+* npx babel index.js
+2_ Utilize o npx agora para fazer a mesma coisa acima so que criando um arquivo fora do
+terminal para exibir o codigo convertido o diretorio sera chamado de dist.js
+* npx babel index.js --out-file dist.js
+3_ Conversão do codigo para versões mais antigas da linguagem adaptando assim para nave
+gadores mais antigos
+-- E preciso passar o presets=@babel/preset-env para alterar o formato do codigo
+* npx babel index.js --out-file dist.js --presets=@babel/preset-env
+4_ Utilizando o babel em varios arquivos diferentes passando o diretorio src como sendo
+a pontado como um diretorio para o babel e criando uma nova pasta para esse versionament
+ser tratado de forma organizada
+* npx babel src --out-dir dist --presets=@babel/preset-env
+---------------------------------------------------------------------------------------
+                                 Utilizando os scripts
+1_ Utilizando os comandos de script, va ao diretorio package.json adicione o scripts de
+* "babel": "babel src --out-dir pastDist --presets=@label/preset-env"
+2_ va ao terminal e utilize o 
+* npm run babel
+---------------------------------------------------------------------------------------
+                                Arquivo de configuração
+1_ Organizando melhor configurações,crie um diretorio nome padrão para esse diretorio:
+* babel.config.js 
+2_ Use o metodo exports para exportar um objeto utilizando o commomjs com as chaves que
+vc vai utilizar
+* module.exports = {
+	presets: [
+	["@babel/preset-env"]
+	]	
+}
+3_ Va ate os scripts e remova o babel/preset e pode rodar o codigo 
