@@ -1,0 +1,41 @@
+instalando webpack
+1_ webpack e o nucleo principal oque faz funcionar 
+2_ webpack/cli e a ferramenta que se usa para manipular o webpack no terminal
+
+*  npm install --save-dev webpack webpack/cl
+* npx webpack
+
+configurações webpack
+-----------------------------------------------------
+const path = require('path') // caminhos no sistema operacional
+module.exports = {
+        entry: { // Entrada do arquivo
+                index: './src/index.js', //  Nome e caminho do arquivo
+                hello: './src/hello.js' // nome e caminho do segundo arquivo 
+        },
+        mode: 'development',// modo de produção ou arquivo final 
+        output: {
+                path: path.resolve(__dirname, 'public')// caminho completo para o diretorio atual , segundo parametro ele inclui no caminho final
+                ,filename : '[name].bundle.min.js' // caminho do segundo arquivo como
+        }
+}
+
+----------------------------------------------------
+
+Utilizando loaders css
+
+* npm install --save-dev style-loader css-loader
+const path = require('path') // caminhos no sistema operacional
+module.exports = {
+        entry: { // Entrada do arquivo
+                index: './src/index.js' //  Nome e caminho do arquivo
+        },
+        mode: "development",
+        module: { // module passa a opção que ele quer modificar
+                rules: [{ //  com as rules que significam as regras que o web pack vai usar 
+                        test: /\.css$/, // expressoes regulares exteção do arquivo que vc quer passar
+                        // acima vc pode passar a extenção para qualquer arquivo 
+                        use: ['style-loader','css-loader'] // qual loader sera usado
+                }]
+        }
+}
